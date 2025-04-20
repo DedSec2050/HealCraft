@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-MediAid are currently supported with security updates:
+HealCraft are currently supported with security updates:
 
 | Version | Supported          |
 | ------- | ------------------ |
@@ -26,6 +26,6 @@ Once the vulnerability has been fixed, we will release a security update as soon
 
 We kindly request that you do not publicly disclose the vulnerability until we have had sufficient time to investigate and mitigate it. We believe in responsible disclosure and will provide credit to you for your assistance unless you request otherwise.
 
-At MediAid, we take security seriously and are committed to ensuring the safety and privacy of our users. Your contribution to the security of our platform is highly appreciated.
+At HealCraft, we take security seriously and are committed to ensuring the safety and privacy of our users. Your contribution to the security of our platform is highly appreciated.
 
 Thank you for your support in making MediAid more secure.

@@ -9,6 +9,11 @@ const setRoutes = require("./routes/routes");
 // set middlewares and routes
 setMiddlewares(app);
 setRoutes(app);
+app.use(express.json());
+
+app.get("/",(req,res)=>{
+	res.status(200).json({success:true,message:"Welcome to HealCraft API"})
+})
 
 // health check
 app.get("/api/health", (req, res) => {
@@ -19,6 +24,8 @@ app.get("/api/health", (req, res) => {
 app.use((req, res, next) => {
 	res.status(404).json({ success: false, message: "404 Page not found" });
 });
+
+app.use(require("cors")({ origin: "http://localhost:3000" }));
 
 // using custom global error handler
 app.use(errorHandler);

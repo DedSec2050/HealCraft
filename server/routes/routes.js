@@ -8,6 +8,7 @@ const pendingHandler = require("./pendingRoute");
 const bestDonorHandler = require("./bestDonorRoute");
 const reviewHandler = require("./reviewRoute");
 const dashboardHandler = require("./dashboardRoute");
+const ngoHandler=require("./ngoRoutes")
 
 const routes = [
 	{
@@ -50,6 +51,10 @@ const routes = [
 		path: "/api/review",
 		handler: reviewHandler,
 	},
+	{
+		path:"/api/ngo",
+		handler:ngoHandler,
+	}
 ];
 
 module.exports = (app) => {

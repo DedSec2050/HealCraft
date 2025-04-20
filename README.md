@@ -3,10 +3,10 @@
   <img src="./template/images/ss-2.png" alt="Image 2" style="width:48%; border: 1px solid black; display:inline-block;">
 </div><br>
 <hr>
-<img src='./template/images/default.png' alt='mediaid' style="width:40%">
+<img src='./template/images/default.png' alt='HealCraft' style="width:40%">
 <hr>
 
-Welcome to the MediAid project repository! This project aims to provide a platform for individuals and organizations to donate unused or unexpired medicines to those in need. By donating medicines, you can help reduce healthcare costs and improve access to essential medications for people who cannot afford them.
+Welcome to the HealCraft project repository! This project aims to provide a platform for individuals and organizations to donate unused or unexpired medicines to those in need. By donating medicines, you can help reduce healthcare costs and improve access to essential medications for people who cannot afford them.
 
 ## Getting Started
 
@@ -17,7 +17,7 @@ Welcome to the MediAid project repository! This project aims to provide a platfo
 - Use `cd client` then `npm run dev` to run your client
 - Use `cd server` then `npm run serve` to run your server
 
-Admin email: mediaid-admin@gmail.com<br>
+Admin email: HealCraft-admin@gmail.com<br>
 Admin password: 123456789
 
 ### User guide

@@ -30,194 +30,197 @@ import PathName from "../components/PathName";
 import Protected from "./Protected";
 import Admin from "./Admin";
 import AlreadyLoggedIn from "./AlreadyLoggedIn";
+import Ngo from "../pages/Ngo";
+import AdminDashboard from "../pages/AdminDashboard";
 
 const Routers = () => {
 	return (
-		<PathName>
-			<Routes>
-				<Route path="/" element={<Layout />}>
-					<Route index element={<Home />} />
-					<Route
-						path="dashboard"
-						element={
-							<Admin>
-								<Dashboard />
-							</Admin>
-						}
-					/>
-					<Route path="medicines">
-						<Route index element={<MedicinesPage />} />
-						<Route path=":medicineId" element={<DetailsMedicine />} />
-						<Route
-							path="edit/:medicineId"
-							element={
-								<Protected>
-									<Admin>
-										<AddMedicine />
-									</Admin>
-								</Protected>
-							}
-						/>
-						<Route
-							path="apply/:medicineId"
-							element={
-								<Protected>
-									<MedicineApply />
-								</Protected>
-							}
-						/>
-						<Route path="search" element={<SearchResultPage />} />
-					</Route>
+    <PathName>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route
+            path="dashboard"
+            element={
+              <Admin>
+                <Dashboard />
+              </Admin>
+            }
+          />
+          <Route path="medicines">
+            <Route index element={<MedicinesPage />} />
+            <Route path=":medicineId" element={<DetailsMedicine />} />
+            <Route
+              path="edit/:medicineId"
+              element={
+                <Protected>
+                  <Admin>
+                    <AddMedicine />
+                  </Admin>
+                </Protected>
+              }
+            />
+            <Route
+              path="apply/:medicineId"
+              element={
+                <Protected>
+                  <MedicineApply />
+                </Protected>
+              }
+            />
+            <Route path="search" element={<SearchResultPage />} />
+          </Route>
 
-					<Route path="profile">
-						<Route
-							index
-							element={
-								<Protected>
-									<Profile />
-								</Protected>
-							}
-						/>
-						<Route
-							path="edit"
-							element={
-								<Protected>
-									<EditProfile />
-								</Protected>
-							}
-						/>
-					</Route>
+          <Route path="profile">
+            <Route
+              index
+              element={
+                <Protected>
+                  <Profile />
+                </Protected>
+              }
+            />
+            <Route
+              path="edit"
+              element={
+                <Protected>
+                  <EditProfile />
+                </Protected>
+              }
+            />
+          </Route>
 
-					<Route
-						path="medicine/add"
-						element={
-							<Protected>
-								<Admin>
-									<AddMedicine />
-								</Admin>
-							</Protected>
-						}
-					/>
+          <Route
+            path="medicine/add"
+            element={
+              <Protected>
+                <Admin>
+                  <AddMedicine />
+                </Admin>
+              </Protected>
+            }
+          />
 
-					<Route path="gallery" element={<GalleryPage />} />
-					<Route
-						path="gallery-photo/add"
-						element={
-							<Protected>
-								<Admin>
-									<AddPhotoPage />
-								</Admin>
-							</Protected>
-						}
-					/>
+          <Route path="gallery" element={<GalleryPage />} />
+          <Route
+            path="gallery-photo/add"
+            element={
+              <Protected>
+                <Admin>
+                  <AddPhotoPage />
+                </Admin>
+              </Protected>
+            }
+          />
 
-					<Route path="health-tips">
-						<Route index element={<HealthTips />} />
-						<Route
-							path="add"
-							element={
-								<Protected>
-									<Admin>
-										<AddHealthTip />
-									</Admin>
-								</Protected>
-							}
-						/>
-						<Route
-							path="edit/:healthTipId"
-							element={
-								<Protected>
-									<Admin>
-										<AddHealthTip />
-									</Admin>
-								</Protected>
-							}
-						/>
-					</Route>
+          <Route path="health-tips">
+            <Route index element={<HealthTips />} />
+            <Route path="add" element={<AddHealthTip />} />
+            <Route path="edit/:healthTipId" element={<AddHealthTip />} />
+          </Route>
 
-					<Route
-						path="donate"
-						element={
-							<Protected>
-								<Donate />
-							</Protected>
-						}
-					/>
-					<Route
-						path="history"
-						element={
-							<Protected>
-								<Admin>
-									<History />
-								</Admin>
-							</Protected>
-						}
-					/>
-					<Route
-						path="donor-list"
-						element={
-							<Protected>
-								<Admin>
-									<DonorList />
-								</Admin>
-							</Protected>
-						}
-					/>
-					<Route
-						path="receiver-list"
-						element={
-							<Protected>
-								<Admin>
-									<ReceiverList />
-								</Admin>
-							</Protected>
-						}
-					/>
-					<Route path="best-donors" element={<BestDonors />} />
-					<Route
-						path="pending"
-						element={
-							<Protected>
-								<Admin>
-									<Pending />
-								</Admin>
-							</Protected>
-						}
-					/>
-					<Route path="faq" element={<FAQ />} />
-					<Route path="contact" element={<Contact />} />
-					<Route path="about" element={<About />} />
-				</Route>
+          <Route
+            path="donate"
+            element={
+              <Protected>
+                <Donate />
+              </Protected>
+            }
+          />
 
-				<Route
-					path="/login"
-					element={
-						<AlreadyLoggedIn>
-							<Login />
-						</AlreadyLoggedIn>
-					}
-				/>
-				<Route
-					path="/register"
-					element={
-						<AlreadyLoggedIn>
-							<Register />
-						</AlreadyLoggedIn>
-					}
-				/>
+          <Route
+            path="Ngo"
+            element={
+              <Protected>
+                <Ngo />
+              </Protected>
+            }
+          />
 
-				<Route
-					path="/reset-password"
-					element={
-						<Protected>
-							<ResetPassword />
-						</Protected>
-					}
-				/>
-				<Route path="*" element={<NotFound404 />} />
-			</Routes>
-		</PathName>
-	);
+          <Route
+            path="AdminDashboard"
+            element={
+              <Protected>
+                <AdminDashboard />
+              </Protected>
+            }
+          />
+
+          <Route
+            path="history"
+            element={
+              <Protected>
+                <Admin>
+                  <History />
+                </Admin>
+              </Protected>
+            }
+          />
+          <Route
+            path="donor-list"
+            element={
+              <Protected>
+                <Admin>
+                  <DonorList />
+                </Admin>
+              </Protected>
+            }
+          />
+          <Route
+            path="receiver-list"
+            element={
+              <Protected>
+                <Admin>
+                  <ReceiverList />
+                </Admin>
+              </Protected>
+            }
+          />
+          <Route path="best-donors" element={<BestDonors />} />
+          <Route
+            path="pending"
+            element={
+              <Protected>
+                <Admin>
+                  <Pending />
+                </Admin>
+              </Protected>
+            }
+          />
+          <Route path="faq" element={<FAQ />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="about" element={<About />} />
+        </Route>
+
+        <Route
+          path="/login"
+          element={
+            <AlreadyLoggedIn>
+              <Login />
+            </AlreadyLoggedIn>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <AlreadyLoggedIn>
+              <Register />
+            </AlreadyLoggedIn>
+          }
+        />
+
+        <Route
+          path="/reset-password"
+          element={
+            <Protected>
+              <ResetPassword />
+            </Protected>
+          }
+        />
+        <Route path="*" element={<NotFound404 />} />
+      </Routes>
+    </PathName>
+  );
 };
 
 export default Routers;

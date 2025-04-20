@@ -36,6 +36,8 @@ exports.viewSingleHealthTipController = asyncHandler(async (req, res) => {
 exports.addHealthTipController = asyncHandler(async (req, res) => {
 	const { body } = req;
 
+	console.log(body)
+
 	const newHealthTip = await new HealthTip(body).save();
 
 	if (newHealthTip)

@@ -14,7 +14,7 @@ const SectionTitleButton = ({ link, text }) => {
 				backgroundColor: "secondary.light",
 				"&:hover": { backgroundColor: "secondary.main" },
 			}}
-			onClick={() => navigate(`${link}`)}
+			onClick={() => {console.log("Hello");console.log(link);navigate(`${link}`)}}
 		>
 			{text}
 		</Button>

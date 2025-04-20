@@ -6,30 +6,47 @@ import { Link } from "react-router-dom";
 
 const DrawerHeaderContents = ({ handleShowFullSearch, handleLeftDrawerToggle }) => {
 	return (
-		<>
-			<Box sx={{ display: { xs: "none", sm: "none", md: "inline-block" } }}>
-				<Link to="/">
-					<img
-						src="/images/default.png"
-						alt="brand-logo"
-						style={{ marginTop: "3px" }}
-						height="27"
-					/>
-				</Link>
-			</Box>
-			<CustomIconButton onClick={handleLeftDrawerToggle}>
-				<MenuIcon size={22} />
-			</CustomIconButton>
-			<CustomIconButton
-				sx={{
-					display: { xs: "flex", sm: "flex", md: "none" },
-				}}
-				onClick={handleShowFullSearch}
-			>
-				<SearchIcon size={22} />
-			</CustomIconButton>
-		</>
-	);
+    <>
+      <Box sx={{ display: { xs: "none", sm: "none", md: "inline-block" } }}>
+        <Link
+          to="/"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            textDecoration: "none",
+            color: "#1e1e1e", // professional dark gray
+            fontWeight: "600",
+            fontSize: "20px",
+            fontFamily: "Segoe UI, Roboto, sans-serif",
+            gap: "10px",
+          }}
+        >
+          <img
+            src="/images/Logo.jpeg"
+            alt="HealCart Logo"
+            style={{
+              height: "35px",
+              width: "35px",
+              borderRadius: "5px",
+              objectFit: "cover",
+            }}
+          />
+          <span>HealCart</span>
+        </Link>
+      </Box>
+      <CustomIconButton onClick={handleLeftDrawerToggle}>
+        <MenuIcon size={22} />
+      </CustomIconButton>
+      <CustomIconButton
+        sx={{
+          display: { xs: "flex", sm: "flex", md: "none" },
+        }}
+        onClick={handleShowFullSearch}
+      >
+        <SearchIcon size={22} />
+      </CustomIconButton>
+    </>
+  );
 };
 
 export default DrawerHeaderContents;

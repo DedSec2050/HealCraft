@@ -144,14 +144,16 @@ exports.deleteMedicineController = asyncHandler(async (req, res) => {
 
 exports.donateMedicineController = asyncHandler(async (req, res) => {
 	const { file, body, decoded } = req;
-
+  
+	console.log("sending")
 	let uploadImage = await uploadImageHandler(file, "mediAid/medicines");
+	console.log("uploaded")
 
 	const addMedicine = await new Medicine({
 		...body,
 		donorAccount: decoded.id,
 		storedDosages: body.dosages,
-		status: "pending",
+		status: "accepted",
 		medicineImage: uploadImage.secure_url || defaultMedicineImage,
 		cloudinaryId: uploadImage.public_id || "",
 	}).save();

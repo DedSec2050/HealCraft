@@ -59,6 +59,19 @@ const DrawerLists = ({ drawerWidth = 260, isSmallScreen }) => {
 					text="Gallery"
 					icon={<IconBrandGooglePhotos size={20} />}
 				/>
+
+				<SingleNavLink
+				  link="/Ngo"
+					text="Ngo Registration"
+					icon={<IconBrandGooglePhotos size={20} />}
+					/>
+
+					<SingleNavLink
+					  link="/AdminDashboard"
+						text="Admin Dashboard"
+						icon={<IconBrandGooglePhotos size={20} />}
+						/>
+
 				{userInfoStatus?.user_type === "admin" && (
 					<SingleNavLink
 						link="/gallery-photo/add"

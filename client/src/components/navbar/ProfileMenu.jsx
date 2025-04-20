@@ -18,7 +18,7 @@ const ProfileMenu = ({ profileInfo, anchorEl, open, handleClose }) => {
 			.unwrap()
 			.then((response) => {
 				if (response.msg === "logout_successful") {
-					Cookies.remove("uinfo");
+					Cookies.remove("info");
 					toast.success("Logout successful");
 					dispatch(set());
 					navigate("/", { replace: true });

@@ -5,7 +5,9 @@ import CommonLayout from "./CommonLayout";
 const Layout = () => {
 	return (
 		<CommonLayout>
+			{/* Outlet is used to render nested routes */}
 			<Outlet />
+			{/* Footer is used to display the page footer */}
 			<Footer />
 		</CommonLayout>
 	);

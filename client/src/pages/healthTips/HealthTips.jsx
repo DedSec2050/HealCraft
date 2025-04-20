@@ -3,6 +3,7 @@ import SectionTitle from "../../components/SectionTitle";
 import HealthTipExcerpt from "./HealthTipExcerpt";
 import { useViewAllHealthTipsQuery } from "../../features/healthTipsSlice/healthTipsSlice";
 import HealthTipSkeleton from "./HealthTipSkeleton";
+import { Link } from "react-router-dom";
 
 const HealthTips = () => {
 	const responseInfo = useViewAllHealthTipsQuery();

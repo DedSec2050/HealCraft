@@ -1,6 +1,6 @@
-# Contributing to MediAid
+# Contributing to HealCraft
 
-Thank you for considering contributing to MediAid! We welcome any contributions that can help improve the project and make it better for everyone. This document will guide you on how to contribute to this project effectively.
+Thank you for considering contributing to HealCraft! We welcome any contributions that can help improve the project and make it better for everyone. This document will guide you on how to contribute to this project effectively.
 
 ## Table of Contents
 
@@ -118,6 +118,6 @@ By contributing to this project, you agree that your contributions will be licen
 
 ---
 
-We appreciate your time and efforts in contributing to MediAid! If you have any questions or need further assistance, feel free to reach out to the project maintainers.
+We appreciate your time and efforts in contributing to HealCraft! If you have any questions or need further assistance, feel free to reach out to the project maintainers.
 
 Happy coding!

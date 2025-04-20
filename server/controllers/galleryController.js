@@ -27,6 +27,7 @@ exports.addGalleryImageController = asyncHandler(async (req, res) => {
 		uploadImage = await uploadImageHandler(file, "mediAid/gallery");
 	}
 
+	console.log("image")
 	// add new gallery image
 	const newGalleryImage = await new Gallery({
 		...body,
@@ -43,4 +44,33 @@ exports.addGalleryImageController = asyncHandler(async (req, res) => {
 		msg: "gallery_img_not_added",
 		newGalleryImage: null,
 	});
+});
+
+
+
+const GalleryImage = require("../models/GalleryModel");
+const cloudinary = require("../utils/cloudinaryHandler"); 
+exports.deleteGalleryImageController = asyncHandler(async (req, res) => {
+  const imageId = req.params.id;
+
+  // 1. Find image in DB
+  const image = await GalleryImage.findById(imageId);
+	console.log(image)
+
+  if (!image) {
+    return res.status(404).json({ message: "Image not found" });
+  }
+
+  // 2. Delete from Cloudinary if it has a cloudinaryId
+  if (image.cloudinaryId) {
+    await cloudinary.uploader.destroy(image.cloudinaryId);
+  }
+
+  // 3. Delete from MongoDB
+  await image.deleteOne();
+
+  res.status(200).json({
+    message: "Gallery image deleted successfully",
+    deletedImage: image,
+  });
 });
